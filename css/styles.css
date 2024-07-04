@@ -1,0 +1,79 @@
+:root {
+    --color-nemo: #ff4a11;
+    --color-granite: #252629;
+    --color-water-10: #f3f5f9;
+    --color-foam: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui;
+    color: var(--color-nemo);
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    font-size: 36px;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--color-nemo);
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    max-width: 500px;
+}
+
+article {
+    margin: 2rem auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--color-water-10);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+    max-width: 1400px;
+}
+
+img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 1024px) {
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        position: relative;
+        margin: auto;
+        top: auto;
+        right: auto;
+    }
+
+    p {
+        flex: 1;
+        text-align: center;
+        margin-right: 1rem;
+    }
+}
